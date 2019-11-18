@@ -5,6 +5,7 @@
 """
 This program helps converting different formats of the
 input file (pdf, doc, etc) to text (.txt)
+
 """
 
 # Importing libraries
