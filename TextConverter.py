@@ -134,4 +134,4 @@ def extract_github(text):
 if __name__ == '__main__':
     f = convertPDFToText("Resume_Harsha_Updated.pdf")
     #print(get_total_experience('f'))
-    print(extract_github(f))
+    print((f))
