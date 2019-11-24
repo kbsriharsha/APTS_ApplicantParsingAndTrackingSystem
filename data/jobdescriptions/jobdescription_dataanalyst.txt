@@ -1,0 +1,43 @@
+Job Summary
+The primary function of this Senior Data Architect position is to provide architectural guidance, technological recommendations and transition strategies that support the development and implementation of data warehousing and analytical reporting initiatives while also providing hands-on consultation and modeling experience to other large initiatives within the Bond/IT space. Focus is on the development of an end to end information architecture and strategy, playing a lead role on projects by providing the appropriate data architecture solutions and ensuring alignment with the overall data management strategies.
+
+Primary Job Duties & Responsibilities
+
+Drive the Data Warehouse Modernization strategy through implementation.
+Serve as an expert resource on matters of data architecture to business and IT staff in all phases of data warehouse and data mart development, implementation and support.
+Provide guidance to development application areas by applying knowledge of data warehouse design, extract-transform-load (ETL) design and development.
+Balance short-term versus long-term actions, strategic versus tactical requirements, while continuing to move forward towards the strategic vision for the data Warehouse.
+Incorporate into Bond the enterprise data management methodology and standards for data modeling and data architecture.
+Create appropriate standards, processes and tools to promote and facilitate:
+Mapping of data sources.
+Documenting interfaces and data movement.
+Designing the movement of data through the enterprise:
+Focus on data quality:
+Participate in developing consistent definitions for common reference data.
+Establish measures to chart progress related to completeness and quality of meta-data for enterprise information, to support reduction of data redundancy and fragmentation, elimination of unnecessary movement of data, and improvement of data quality.
+Provide input on large-scale projects and road maps for compatibility with the vision.
+Research and document information architecture standards and best practices.
+Provide support on use of common enterprise information models and promote their use and enhancement by new projects.
+Minimum Qualifications
+High School diploma or equivalent required. 3 years of experience in enterprise, application, and/or information architecture required.
+
+Education, Work Experience & Knowledge
+Bachelor’s degree in a related field preferred. 5 years of experience in enterprise, application, and/or information architecture preferred.
+
+Job Specific & Technical Skills & Competencies:
+
+5 years of experience in:
+Creating and maintaining end to end data architectures
+Logical, access, and physical, data modeling
+Normalized and dimensional data modeling techniques
+Data analysis and mapping
+Creation and usage of metadata
+Working knowledge of modeling tools (e.g., Computer Associates (CA) AllFusion: ERWIN Model Manager, IBM Rational Suite, Rational (RSA & RDA), Hackolade)
+Hands-on technical experience using data warehouse, business intelligence and analytics products
+Excellent communication and facilitation skills
+Team oriented with excellent collaboration skills
+Attention to detail, and a commitment to quality work
+Exhibits leadership qualities
+Experience working in a matrixed organization.
+Experience in Property Casualty insurance, Bond and Financial Products a plus.
+Strong access modeling/SQL Query skills leaning towards the physical data modeling practice a plus.

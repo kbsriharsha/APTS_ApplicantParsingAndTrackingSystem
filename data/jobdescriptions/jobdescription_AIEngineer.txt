@@ -1,0 +1,103 @@
+WHO WE ARE
+Claim Technology is a team of highly motivated and skilled professionals who are leading Travelers’ digital transformation journey and driving business value that creates a sustainable competitive advantage for our company. We deliver, implement and administer technology solutions that enable all Claim employees to be more effective at their jobs and meet the needs of our company’s customers.
+If YOU…
+
+Have a passion for leading by example through actions and words and helping those around you develop and perform as highly as possible.
+Have an Agile mindset, along with being value-focused and guided by the Lean-Agile principles.
+Enjoy working collaboratively with individuals at all levels and many parts of the organization.
+Have the courage to say what needs to be said in a respectful and tactful way, even if it’s not what people want to hear.
+Have the desire to be a lifelong learner, enjoy sharing your knowledge by coaching others, and enable others to continuously improve through mentorship.
+Above all, measure your own success by the success of your team and the satisfaction of our customers.
+Then, Claim Technology is the place for you!
+
+Our TEAM…
+
+Is responsible for developing technology systems that support our company’s claim-handling processes and right-touch digital capabilities, enabling the company to continuously stay ahead of evolving customer expectations and emerging disruptive competition.
+Is made up of diverse, competent and reliable individuals who trust one another and feel free to express their feelings and ideas.
+Is aligned with a shared vision and focused values, great at collaborating and accomplishing our tasks, and committed to quality results.
+Adapts quickly to changing conditions and demands, takes accountability as a group, and works hard to accomplish our goals.
+Reflects and learns from past experience and is committed to relentless improvement.
+Recognizes and values team contributions and celebrates successes.
+Marketing Description
+Travelers is a property casualty insurer with a rich history of innovation that spans three centuries and has yielded numerous “industry firsts.” We issued the first insurance policies for automobiles, aircraft liability, accidents in space flight and lunar exploration, and identity fraud expense reimbursement, and we created the first predictive analytical model to help injured employees avoid chronic pain and opioid abuse. We are a leader in personal, business and specialty insurance and the only property casualty company in the Dow Jones Industrial Average.
+At Travelers, our single biggest competitive advantage is our people. Every day, our employees move Travelers closer to achieving the vision of being the undeniable choice for the customer and an indispensable partner for our agents and brokers. We are a team driven to fulfilling our promise to take care of our customers, our communities and each other. That’s the power of 30,000 people. All working together to ensure that we’re performing today and transforming for tomorrow.
+Ready to go where you’ve only imagined? Apply now and move your career to the next level with Travelers.
+
+Primary Job Duties & Responsibilities
+As an Senior AI Data Engineer
+
+Data Acquisition, Prep and Exploration:
+Performs data acquisition, preparation, and performs analysis leveraging a variety of data programming techniques. Supports the implementation of highly complex project(s) that support the business. Tasks include the building and support of data pipelines to integrate data of various types and complexity (structured/unstructured, audio, imagery, etc.), cleansing and rational organization of data into data sets to support experimental AI work and model development.The level of work required is considered advanced with ability to under minimal supervision. This job does not have direct reports. The role scope requires an extensive knowledge of on-premise (private), off-premise (public) and hybrid cloud models along with cloud implementation service models.
+
+Performing complex data analysis, assessment, and design at an expert level.
+Leads investigation and resolution efforts for high impact data defects and problems.
+Ensures work complies with Travelers standards, processes, and protocols.
+Identifies gaps, escalating issue to manager.
+Develops and applies complex data derivations, business transformation rules, and data requirements.
+Collaborates with project team to identify, estimate, and prioritize project and/or enhancement activities.
+Creates complex (technology and features) data visualizations techniques to help support data exploration.
+Work within Travelers standards, processes, and protocols.
+Incorporate core data management competencies – data governance, data security, data quality.
+Share knowledge and Independently train business users on data products/analytic environment when necessary
+
+Data Solutions & Analytics Implementations:
+
+Collaborates to develop strategic data solutions including transformation logic, rules, tables, as well as business requirements, governance, and specifications.
+Operationalizes and automates more complex data (more systems, data sets and streams, size of data sets more substantial) products into business.
+Leads integration of analytic data products, including pilots and proof of concepts.
+Applies knowledge of current industry trends and techniques to formulate solutions within the context of assigned projects and/or enhancements.
+Strong understanding across Cloud and infrastructure components (server, storage, network, data, and applications) to deliver end to end Cloud Infrastructure architectures and designs.
+Experience with Cloud native application development, Cloud deployment, and Cloud application refactoring
+Understanding of Cloud Computing Technologies and related emerging technology (e.g. Amazon Web Services EC2, Lambda,Glue,Athena)
+Data Culture:
+
+Frequently presents and translates complex information in relevant business terms.
+Ensures business and data users are properly trained on data products/analytic environment. Identifies training opportunities.
+Minimum Qualifications
+A bachelor’s degree in Computer Science or a related field, or its equivalent in work experience, and five years of programming/development experience.
+
+Education, Work Experience & Knowledge
+
+Bachelor’s degree or equivalent and 7 plus years of related work experience.
+Proficiency in any of the programming languages such as Python.
+Experience with Cloud technology (AWS & Google) and designing solutions that leverage its unique advantages.
+Experience with modern technologies such as Docker, AWS S3, Lambda, Textract, etc.
+Leading, coaching and mentoring teams across projects
+Understanding of both relational and modern databases and corresponding query language such as SQL.
+Self-motivated and ability to work independently as well as being a team player.
+Strong communication skills and ability to create professional presentations and present to peers and management.
+Effective written and verbal communication skills adapted to the intended audience.
+Job Specific & Technical Skills & Competencies
+Technical Knowledge:
+Able to expertly assess, design develop, and support applications, systems and solutions to achieve business and/or technical requirements. Demonstrates technical expertise for multiple languages, applications, systems, technologies, and/or frameworks, and has the ability to influence technical direction or defect resolution. Fully understands business applications and/or technical system environments in which the system operates.
+Communication Skills:
+Ability to communicate thoughts/designs/ideas in an unambiguous manner and adjusts communication based on audience.
+
+Exhibits active and effective communication skills with team members – including active listening and effective written and verbal communication skills.
+Effectively contributes and communicates with the immediate team. Able to present complex technical concepts to audiences of varying size and level.
+Business Knowledge & Partnership:
+
+Able to develop business partnerships and influence business priorities through solution identification aligned with business objectives and goals.
+Able to communicate in business terms and describe IT capabilities and concepts in ways that the business can understand.
+Problem Solving & Decision Making:
+
+Able to proficiently diagnose root causes and solve complex problems.
+Able to evaluate alternative solutions and assess risk before taking action. Has the ability to reach sound decisions quickly and escalates appropriately. Demonstrates ability to optimize the use of all available resources.
+Team Orientation:
+
+Able to maintain and enhance partnerships across the organization to achieve objectives. Practices objectivity and openness to others’ views. Able to recognize and support team priorities.
+Leadership:
+Accountable to set technical goals and priorities for self and other team members. Exhibits team leadership and collaborates with partners. Planning and Project Management: Demonstrates ability to identify critical project tasks and establish clear priorities while keeping the bigger picture in mind. Able to effectively collaborate with Project Manager and utilize sound project management practices. Able to manage time and competing priorities.
+Financial Awareness: Able to assess the financial impact of recommended designs/solutions.
+
+Environmental/Work Schedules/Other
+Requires weekend work hours. Requires overnight work hours. Requires holiday work hours (Federal and religious). Requires extended periods (1 or more weeks) of travel as needed. Requires travel up to 5% of time.
+
+Preferred Qualifications
+
+5+ years of experience working on data engineering and analysis of complex data (structured and unstructured data sets)
+3+ years working with cloud based platforms (AWS, Azure, Google Cloud, etc.) in an enterprise environment
+Experience with common data science toolkits such as Python, R etc. preferred
+Exposure to AWS or other cloud computing services preferred
+Exposure to Machine Learning Algorithms is preferred
+Preferred qualification of a bachelor’s degree and further education or experience in engineering, computer science or other technical related field.

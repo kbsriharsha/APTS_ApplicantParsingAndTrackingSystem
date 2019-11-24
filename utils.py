@@ -13,6 +13,8 @@ import sys
 import os
 import re
 import pyap
+import nltk
+import textstat
 
 def email(text):
     """
@@ -74,5 +76,40 @@ def extract_github(text):
 
     return github[0]
 
+def name(text):
+    """
+    Extracts Name from the
+    """
+
+def readability(text):
+    """
+    Provides the readability grade for the text. Here we are using the
+    flesch reading ease score. Higher the score, easier to read
+
+    text: input text on which score has to be calculated
+    """
+    score = textstat.flesch_reading_ease(text)
+    grade = round(textstat.flesch_kincaid_grade(text))
+
+    if score > 90:
+        summary = "Very easy to read. Easily understood by an average 11-year-old student; "
+    elif score > 80:
+        summary = "Easy to read. Conversational English for consumers"
+    elif score > 70:
+        summary = "Fairly easy to read"
+    elif score > 60:
+        summary = "Plain English. Easily understood by 13- to 15-year-old students."
+    elif score > 50:
+        summary = "Fairly difficult to read."
+    elif score > 30:
+        summary = "Difficult to read"
+    else:
+        summary = "Very difficult to read. Best understood by university graduates."
+
+    return score, summary, grade
+
+
+
 if __name__ == '__main__':
     print("Provides Helper Functions")
+    print(readability("Harsha is a nostalgic romio"))
