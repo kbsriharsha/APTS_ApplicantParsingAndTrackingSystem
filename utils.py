@@ -65,7 +65,7 @@ def linkedin(text):
 
     return linkedin[0]
 
-def extract_github(text):
+def github(text):
     """
     Extracts linkedin details
 
@@ -76,10 +76,42 @@ def extract_github(text):
 
     return github[0]
 
-def name(text):
+def Name(text):
     """
-    Extracts Name from the
+    This function gives the names from the given text
+
+    text: Text from which names has to be extracted
     """
+    Names = open("first_names.txt", "r").read().lower()
+    # Lookup in a set is much faster
+    Names = set(Names.split("\n"))
+    otherNameHits = []
+    nameHits = []
+    name = None
+    lines = [el.strip() for el in text.split("\n") if len(el) > 0]
+    lines = [nltk.word_tokenize(el) for el in lines]
+    tokens = lines
+    lines = [nltk.pos_tag(el) for el in lines]
+    grammar = r'NAME: {<NN.*><NN.*><NN.*><NN.*>*}'
+    chunkParser = nltk.RegexpParser(grammar)
+    all_chunked_tokens = []
+    for tagged_tokens in lines:
+        if len(tagged_tokens) == 0: continue # Prevent it from printing warnings
+        chunked_tokens = chunkParser.parse(tagged_tokens)
+        all_chunked_tokens.append(chunked_tokens)
+        for subtree in chunked_tokens.subtrees():
+            if subtree.label() == 'NAME':
+                for ind, leaf in enumerate(subtree.leaves()):
+                    if leaf[0].lower() in Names and 'NN' in leaf[1]:
+                        hit = " ".join([el[0] for el in subtree.leaves()[ind:ind+3]])
+                        if re.compile(r'[\d,:]').search(hit): continue
+                        nameHits.append(hit)
+    if len(nameHits) > 0:
+        nameHits = [re.sub(r'[^a-zA-Z \-]', '', el).strip() for el in nameHits]
+        name = " ".join([el[0].upper()+el[1:].lower() for el in nameHits[0].split() if len(el)>0])
+        otherNameHits = nameHits[1:]
+    print(name)
+    return name, otherNameHits
 
 def readability(text):
     """
