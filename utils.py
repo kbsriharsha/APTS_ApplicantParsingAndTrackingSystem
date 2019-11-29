@@ -15,6 +15,21 @@ import re
 import pyap
 import nltk
 import textstat
+import spacy
+import collections
+
+from TextConverter import convertPDFToText
+
+def sent_pos(text):
+    """
+    Splits the given text into words and identifies the pos tags
+    """
+    lines = [el.strip() for el in text.split("\n") if len(el) > 0]
+    lines = [nltk.word_tokenize(el) for el in lines]
+    tokens = lines
+    lines = [nltk.pos_tag(el) for el in lines]
+
+    return lines, tokens
 
 def email(text):
     """
@@ -35,10 +50,7 @@ def mobile_number(text):
     function to extract mobile number from text
     text: plain text extracted from resume file
     """
-    mob_num_regex = r'''\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}
-                    |\(\d{3}\)[-\.\s]*\d{3}[-\.\s]??\d{4}
-                    |\d{3}[-\.\s]??\d{4}
-                    |\(\d{3}[)-\.\s].\d{3}.\d{4}'''
+    mob_num_regex = mob_num_regex = r'''\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)[-\.\s]*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]\d{3}.\d{4}|\(\d{3}[)-\.\s].\d{3}.\d{4}'''
 
     phone = re.findall(re.compile(mob_num_regex), text)
     if phone:
@@ -52,7 +64,12 @@ def address(text):
 
     text: input text from where address to be extracted
     """
-    return pyap.parse(re.sub(r',', "", f), country='US')[0]
+    if pyap.parse(re.sub(r',|#\d+', "", text), country='US'):
+
+        return pyap.parse(re.sub(r',|#\d+', "", text), country='US')[0]
+    else:
+
+        return None
 
 def linkedin(text):
     """
@@ -67,7 +84,7 @@ def linkedin(text):
 
 def github(text):
     """
-    Extracts linkedin details
+    Extracts github details
 
     text: input text from where linkedin details have to be extracted
     """
@@ -113,6 +130,74 @@ def Name(text):
     print(name)
     return name, otherNameHits
 
+def expertise_match(text):
+    """
+    Matches the given text to the expertise list
+
+    text: text which has to be matched with the expertise
+    """
+    lines, tokens = sent_pos(text)
+
+    # Selecting only nouns and verbs from the text
+    lis = []
+    for x in lines:
+        lines_nns = " ".join([i for (i,j) in x if j in ('NN', 'NNP', 'NNS', 'NNPS', 'VB', 'VBP', 'VBD')])
+        lis.append(lines_nns)
+    text = "\n".join([x for x in lis if len(x) > 1])
+
+    #Importing the expertise list and preprocessing it
+    exps = open("data/expertise.txt", "r").read().lower()
+    exps = set([re.sub(r'"', "", x) for x in exps.split("\n")])
+
+    #Loading word embedding model
+    nlp = spacy.load('en_core_web_md')
+
+    # Measuring the simiarity of score of every expertise with the resume
+    sim_scores = dict([(x, float(nlp(x).similarity(nlp(text)))) for x in exps])
+
+    # Returning the top 5 expertises which has more expertise scores
+    top5_sim = collections.Counter(sim_scores)
+    top5_sim = top5_sim.most_common()[0:5]
+
+    return top5_sim
+
+def jobdes_rem_similarity(text):
+    """
+    Provides a similarity score between the job description and resume
+
+    text: text to which the similarity score has to be calcualted from the job description
+    """
+    lines, tokens = sent_pos(text)
+
+    # Selecting only nouns and verbs from the text
+    lis = []
+    for x in lines:
+        lines_nns = " ".join([i for (i,j) in x if j in ('NN', 'NNP', 'NNS', 'NNPS', 'VB', 'VBP', 'VBD')])
+        lis.append(lines_nns)
+    text_resume = "\n".join([x for x in lis if len(x) > 1])
+
+
+    # Importing the job descrioption; currently matches to data engineer resume from travelers insurance job board
+    jobdes = open("jobdescription_dataengineer.txt", "r").read().lower()
+
+    lines, tokens = sent_pos(jobdes)
+
+    # Selecting only nouns from the text
+    lis = []
+    for x in lines:
+        lines_nns = " ".join([i for (i,j) in x if j in ('NN', 'NNP', 'NNS', 'NNPS')])
+        lis.append(lines_nns)
+    text_jobdes = "\n".join([x for x in lis if len(x) > 1])
+
+    #Loading word embedding model
+    #nlp = spacy.load('en_core_web_md')
+
+    # Calculating similarity score
+    sim_score = float(nlp(jobdes).similarity(nlp(text_resume)))
+
+    return sim_score
+
+
 def readability(text):
     """
     Provides the readability grade for the text. Here we are using the
@@ -144,4 +229,4 @@ def readability(text):
 
 if __name__ == '__main__':
     print("Provides Helper Functions")
-    print(readability("Harsha is a nostalgic romio"))
+    print(expertise_match(convertPDFToText("Resume_Harsha_Updated.pdf")))

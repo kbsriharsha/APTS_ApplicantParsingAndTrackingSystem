@@ -1,0 +1,40 @@
+Job Summary
+The Claim Business Intelligence & Analytics organization has an exciting opportunity for a Data Engineer. This role will focus on data discovery and transformation for Auto and Property advanced analytic projects. Successful candidates will be able to work closely with our research partners to build predictive modeling datasets. You should be comfortable working with SQL and Python. Experience in a cloud platform (i.e. AWS) a plus.
+
+Marketing Description
+
+
+Primary Job Duties & Responsibilities
+
+Independently perform Data Acquisition, Prep and Exploration: reviews, prepares, basic design, and integrates data.
+Able to correct minor problems and implements data cleansing/quality solutions.
+Apply moderate and develops basic data derivations, business transformation rules, and data requirements.
+Present simple data visualizations to help support data exploration as needed.
+Operationalize and automate well defined simple data products independently.
+Build, test, and implement simple analytic processes, including pilots and proof of concept.
+Assist in training business users on data products/analytic environment.
+Delivers basic training.
+Apply knowledge of current industry trends and techniques to formulate solutions within the context of assigned projects.
+Continue to develop insurance and business intelligence knowledge while learning how work assignments address business issues.
+Understand Travelers standards, processes, and environmental landscape.
+Incorporate core data management competencies – data governance, data security, data quality. Share knowledge with peer users on data or analytic products.
+Minimum Qualifications
+1 year of relevant experience with data tools, techniques, and manipulation required.
+
+Education, Work Experience & Knowledge
+Education: College Degree in STEM related field
+
+Technical Knowledge: Intermediate knowledge of data tools, techniques, and manipulation preferred. Examples (but not limited to): Big data and Cloud platforms Programming languages – SAS, SQL, Spark, Python, Hive, AWS Visualization platforms: QlikView, Tableau and Qlik Sense
+
+Experience: 3 years of relevant experience with data tools, techniques, and manipulation preferred.
+
+Job Specific & Technical Skills & Competencies
+
+Ability to communicate thoughts/designs/ideas in an unambiguous manner and adjusts communication based on audience. Exhibits active and effective communication skills with team members – including active listening and effective written and verbal communication skills. Effectively contributes and communicates with the immediate team.
+Able to recognize and analyze business and data issues of intermediate complexity with minimal supervision.
+Recognize when escalation is necessary.
+Able to leverage previous experience to consider a variety of alternatives to arrive at a timely, practical, and cost-effective solution to resolve defects or incidents.
+Ability to foster relationships with peers to achieve objectives.
+Practices objectivity and openness to others’ views. Able to recognize and support team priorities.
+Ability to manage time and competing priorities and provide management with accurate and timely status information.
+Able to effectively evaluate and estimate routine tasks with clear precedent.
