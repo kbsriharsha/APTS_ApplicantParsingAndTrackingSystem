@@ -64,7 +64,10 @@ def mobile_number(text):
     if phone:
         number = ''.join(phone[0])
 
-        return number
+        return str(number)
+    else:
+
+        return None
 
 def address(text):
     """
@@ -87,8 +90,12 @@ def linkedin(text):
     """
     linkedin_reg = r'''https:\/\/www.linkedin.com\/in\/\w*'''
     linkedin = re.findall(re.compile(linkedin_reg), text)
+    if linkedin:
 
-    return linkedin[0]
+        return str(linkedin[0])
+    else:
+
+        return None
 
 def github(text):
     """
@@ -98,16 +105,20 @@ def github(text):
     """
     github_req = r'''https:\/\/github.com\/\w*'''
     github = re.findall(re.compile(github_req), text)
+    if github:
 
-    return github[0]
+        return str(github[0])
+    else:
 
-def Name(text):
+        return None
+
+def name(text):
     """
     This function gives the names from the given text
 
     text: Text from which names has to be extracted
     """
-    Names = open("first_names.txt", "r").read().lower()
+    Names = open("data/first_names.txt", "r").read().lower()
     # Lookup in a set is much faster
     Names = set(Names.split("\n"))
     otherNameHits = []
@@ -135,8 +146,8 @@ def Name(text):
         nameHits = [re.sub(r'[^a-zA-Z \-]', '', el).strip() for el in nameHits]
         name = " ".join([el[0].upper()+el[1:].lower() for el in nameHits[0].split() if len(el)>0])
         otherNameHits = nameHits[1:]
-    print(name)
-    return name, otherNameHits
+
+    return str(name)
 
 def expertise_match(text):
     """
@@ -146,10 +157,10 @@ def expertise_match(text):
     """
     lines, tokens = sent_pos(text)
 
-    # Selecting only nouns and verbs from the text
+    # Selecting only nouns from the text
     lis = []
     for x in lines:
-        lines_nns = " ".join([i for (i,j) in x if j in ('NN', 'NNP', 'NNS', 'NNPS', 'VB', 'VBP', 'VBD')])
+        lines_nns = " ".join([i for (i,j) in x if j in ('NN', 'NNP', 'NNS', 'NNPS')])
         lis.append(lines_nns)
     text = "\n".join([x for x in lis if len(x) > 1])
 
@@ -165,11 +176,11 @@ def expertise_match(text):
 
     # Returning the top 5 expertises which has more expertise scores
     top5_sim = collections.Counter(sim_scores)
-    top5_sim = top5_sim.most_common()[0:5]
+    top5_sim = [x for x,y in top5_sim.most_common(5)]
 
-    return top5_sim
+    return ", ".join(top5_sim)
 
-def jobdes_rem_similarity(text):
+def jobdes_rsm_similarity(text):
     """
     Provides a similarity score between the job description and resume
 
@@ -186,7 +197,7 @@ def jobdes_rem_similarity(text):
 
 
     # Importing the job descrioption; currently matches to data engineer resume from travelers insurance job board
-    jobdes = open("jobdescription_dataengineer.txt", "r").read().lower()
+    jobdes = open("data/jobdescription_dataengineer.txt", "r").read().lower()
 
     lines, tokens = sent_pos(jobdes)
 
@@ -198,7 +209,7 @@ def jobdes_rem_similarity(text):
     text_jobdes = "\n".join([x for x in lis if len(x) > 1])
 
     #Loading word embedding model
-    #nlp = spacy.load('en_core_web_md')
+    nlp = spacy.load('en_core_web_md')
 
     # Calculating similarity score
     sim_score = float(nlp(jobdes).similarity(nlp(text_resume)))
