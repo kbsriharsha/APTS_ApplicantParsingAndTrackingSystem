@@ -11,7 +11,7 @@ from sqlite3 import Error
 import datetime
 import random
 
-def create_database(database):
+def connect_database(database):
     """
     This function creates the database, or connects to the
     existing database

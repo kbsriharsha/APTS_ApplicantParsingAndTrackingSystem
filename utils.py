@@ -20,6 +20,14 @@ import collections
 
 from TextConverter import convertPDFToText
 
+def preprocess(text):
+    """
+    Elimates the noise and unwanted characters
+
+    text: text that has to be cleaned
+    """
+    return re.sub(r'[^\x00-\x7f]',"","\n".join([el.strip() for el in text.split("\n") if len(el.strip()) > 1]))
+
 def sent_pos(text):
     """
     Splits the given text into words and identifies the pos tags
@@ -226,7 +234,5 @@ def readability(text):
     return score, summary, grade
 
 
-
 if __name__ == '__main__':
-    print("Provides Helper Functions")
-    print(expertise_match(convertPDFToText("Resume_Harsha_Updated.pdf")))
+    print("Importing Utils")
