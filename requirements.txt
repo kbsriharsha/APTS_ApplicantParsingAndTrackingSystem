@@ -1,0 +1,14 @@
+pip:
+  numpy
+  pandas
+  time
+  datetime
+  spacy
+  re
+  sys
+  os
+  pyap
+  nltk
+  collections
+  textstat
+  argparse
