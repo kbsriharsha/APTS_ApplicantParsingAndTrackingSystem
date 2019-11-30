@@ -1,7 +1,7 @@
 # APTS_ApplicantParsingAndTrackingSystem ![](https://img.shields.io/badge/Harsha-Karpurapu-brightgreen.svg?colorB=ff0000)
 
 ### Objectives: 
-- Extracts the important information from the resume
+- Extract the important information from the resume
 - Matches the resume to the provided expertise list (This list was provided by *Vinod* to Harsha)
 - Matches the resume to the Job description (For Concept purpose, I have downloaded the data engineer resume from the job board of travelers insurance)
 
@@ -31,16 +31,18 @@ when someone executes the code, the code pushes the output to the respective col
 
 - Download the DB Browser from [here](https://sqlitebrowser.org/dl/) for viewing the sqlite database
 
-## Information Extraction Details
+### Procedures Used for Achieving the objectives (At highlevel)
 
-- Name
-Based on the concepts of chunking and chinking along with the lookup data
-
+#### Obj1: Extract the important information from the resume
 - Mobile, Email Address, Github, Linkedin
-Regex
+  - Used Regex
 
 - Address
-Regex and pyad library (for standardization)
+  - Used the combination of Regex and pyad library (for standardization)
+
+- Name
+  - Used the chunking and chinking concepts incombination with a lookup table. Unlike any NER model, this process can prescribe the name rather than predict
+    - ``` This process is proven to give better results rather than using any pretrained NER models as its going to be hard for any NER model to understand the variations and the variety of resume.``` 
 
 ## Matching the Resume to provided expertise list
 
