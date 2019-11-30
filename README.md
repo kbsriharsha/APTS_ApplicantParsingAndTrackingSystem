@@ -95,7 +95,7 @@ Currently the job description to be matched is a data engineer position from Tra
 Similarity score between Resume_Harsha_AIScientist (my resume) and job description is 0.90
 Similarity score between resume_trail2 (related to construction) and job description is 0.71
 
-We can clearly see how this process can be efficient in picking the best resumes. 
+We can clearly see how this process can be efficient in picking the best resumes from a pool of resumes. 
 ```
 
 
