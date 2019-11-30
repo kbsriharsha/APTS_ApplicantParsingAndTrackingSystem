@@ -29,3 +29,14 @@ Regex and pyad library (for standardization)
 - This process also uses glove word embedding and calculate the similarity score between the job description and the resume
 
 ```All the traditional ATS systems uses the keywords to filter out the resumes, however there are many scenarios where keyword approach is proven wrong. This is presented as a POC how can we better construct any ATS system with word embedding as they care both for keywords and the order of the words```
+
+## Usage
+
+```
+python resumeparser [-resume resumeFile]
+
+-resume; input resume file
+
+Example: 
+python resumeparser -resume "/data/resumes/resume_trail4.pdf"
+```
