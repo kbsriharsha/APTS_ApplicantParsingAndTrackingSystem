@@ -5,6 +5,30 @@
 - Matches the resume to the provided expertise list (This list was provided by Vinod to Harsha)
 - Matches the resume to the Job description (For Concept purpose, I downloaded one of the resumes from the job board of travelers insurance)
 
+### Code Requirements
+- Execute the below command from your terminal for installing all the required libraries
+
+```
+pip install requirement.txt
+```
+- Download the spacy word embedding model using the below command
+
+```
+python -m spacy download en_core_web_md
+```
+## Usage
+
+```
+python resumeparser [-resume resumeFile]
+
+-resume; input resume file
+
+Example: 
+python resumeparser -resume "/data/resumes/resume_trail4.pdf"
+```
+
+
+
 ## Information Extraction Details
 
 - Name
@@ -30,13 +54,4 @@ Regex and pyad library (for standardization)
 
 ```All the traditional ATS systems uses the keywords to filter out the resumes, however there are many scenarios where keyword approach is proven wrong. This is presented as a POC how can we better construct any ATS system with word embedding as they care both for keywords and the order of the words```
 
-## Usage
 
-```
-python resumeparser [-resume resumeFile]
-
--resume; input resume file
-
-Example: 
-python resumeparser -resume "/data/resumes/resume_trail4.pdf"
-```
