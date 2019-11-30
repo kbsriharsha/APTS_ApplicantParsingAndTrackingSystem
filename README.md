@@ -32,7 +32,7 @@ Example:
 python resumeparser -resume "/data/resumes/resume_trail4.pdf"
 ```
 
-when someone executes the code, the code pushes the output to the respective columns in the database and prints the contents in the json format
+when you execute the code, the code pushes the output to the respective columns in the database and prints the contents in the json format
 
 - Download the DB Browser from [here](https://sqlitebrowser.org/dl/) for viewing the sqlite database
 
