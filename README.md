@@ -53,9 +53,9 @@ when someone executes the code, the code pushes the output to the respective col
 
 #### Obj2: Matching the Resume to provided expertise list
 
-- For every word in the expertise list, I have got the glove word embedding provided by spacy library
-- Then I got the similarity score of the each word embedding to all the nouns (do the parts of speech tagging and eliminate all other part of speech words  other than nouns) of the resume;
-- The top 5 highest similarity score words are given as the expertise of the resume
+- For every word in the expertise list, get the glove word embedding provided by spacy library
+- Then get the similarity score of the each word embedding to all the `nouns` (do the parts of speech tagging and eliminate all other part of speech words  other than nouns) of the resume;
+- The top 5 highest similarity score words are the top 5 as the expertise of the resume
 
 ```
 
@@ -80,13 +80,22 @@ hospital administration'
 
 #### Matching the Resume to the job description
 
-- Get the Glove word embedding to every noun and verb of the resume and the job description. 
+- Get the Glove word embedding to every `noun and verb` of the resume and the job description. 
 - The calcuate the similarity score between those documents with only verbs and nouns
 
 ```
-All the traditional ATS systems uses the keywords to filter out the resumes, however there are many scenarios where keyword approach is proven wrong. This is presented as a POC how can we better construct any ATS system with word embedding as they care both for keywords and the order of the words
+All the traditional ATS systems uses the keywords to filter out the resumes, however there are 
+many scenarios where keyword approach is proven wrong. This is presented as a POC how can we 
+better construct any ATS system with word embedding as they care both for keywords and the order 
+of the words
 
+Examples:
+Currently the job description to be matched is a data engineer position from Travelers Insurance
 
+Similarity score between Resume_Harsha_AIScientist (my resume) and job description is 0.90
+Similarity score between resume_trail2 (related to construction) and job description is 0.71
+
+We can clearly see how this process can be efficient in picking the best resumes. 
 ```
 
 
