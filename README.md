@@ -59,23 +59,23 @@ when someone executes the code, the code pushes the output to the respective col
 
 ```
 
-We have used the pretrained glove embedded model, in an ideal scenario we need to 
-train our own word embedded model on a specfic domain corpus. But the results from 
-the above approach seem compelling too. 
+We have used the pretrained glove embedded model, in an ideal scenario we need to train our 
+own word embedded model on a specfic domain corpus. But the results from the above approach 
+seem compelling too. 
 
-For example: 
------------------------------------------------------------------------------------
--'resume_trail4' is the resume of an Orthopaedic Spine Surgery, below are the top5 
-expertises the code matched from the expertise list
+Examples: 
+--------------------------------------------------------------------------------------------
+-'resume_trail4' is the resume of an Orthopaedic Spine Surgery, below are the top5 expertises 
+the code matched from the expertise list
 
 'radiology, internal medicine, general dentistry, general surgeon, physical therapy'
-------------------------------------------------------------------------------------
-- 'resume_trail2' is the resume of a Building inspector (related to construction), 
-below are the top5 expertises the code matched from the expertise list
+--------------------------------------------------------------------------------------------
+- 'resume_trail2' is the resume of a Building inspector (related to construction), below are 
+the top5 expertises the code matched from the expertise list
 
 'highway design & construction, public health, life care planner, fire cause & analysis, 
 hospital administration'
-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 ```
 
 #### Matching the Resume to the job description
