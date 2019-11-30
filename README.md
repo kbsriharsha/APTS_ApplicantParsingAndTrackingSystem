@@ -27,12 +27,9 @@ Example:
 python resumeparser -resume "/data/resumes/resume_trail4.pdf"
 ```
 
-### Output Sample
-Everytime when someone executes the code, the code pushes the output to the respective columns in the database and prints the contents in the json format
+when someone executes the code, the code pushes the output to the respective columns in the database and prints the contents in the json format
 
-Download the DB Browser from [here](https://sqlitebrowser.org/dl/) for viewing the results
-
-Screen Shot 2019-11-30 at 1.22.17 AM
+- Download the DB Browser from [here](https://sqlitebrowser.org/dl/) for viewing the sqlite database
 
 ## Information Extraction Details
 
