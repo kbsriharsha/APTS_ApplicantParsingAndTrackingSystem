@@ -2,8 +2,10 @@
 
 ### Objectives: 
 - Extract the important information from the resume
-- Matches the resume to the provided expertise list (This list was provided by *Vinod* to Harsha)
-- Matches the resume to the Job description (For Concept purpose, I have downloaded the data engineer resume from the job board of travelers insurance)
+- Match the resume to the provided expertise list (This list was provided by *Vinod* to Harsha)
+- Match the resume to the Job description (For Concept purpose, I have downloaded the data engineer resume from the job board of travelers insurance)
+
+---
 
 ### Code Requirements
 - Execute the below command from your terminal for installing all the required libraries
@@ -16,6 +18,9 @@ pip install requirement.txt
 ```
 python -m spacy download en_core_web_md
 ```
+
+---
+
 ### Usage
 
 ```
@@ -31,6 +36,8 @@ when someone executes the code, the code pushes the output to the respective col
 
 - Download the DB Browser from [here](https://sqlitebrowser.org/dl/) for viewing the sqlite database
 
+---
+
 ### Procedures Used for Achieving the objectives (At highlevel)
 
 #### Obj1: Extract the important information from the resume
@@ -41,16 +48,27 @@ when someone executes the code, the code pushes the output to the respective col
   - Used the combination of Regex and pyad library (for standardization)
 
 - Name
-  - Used the chunking and chinking concepts incombination with a lookup table. Unlike any NER model, this process can prescribe the name rather than predict
+  - Used the chunking and chinking concepts in combination with a lookup table. Unlike any NER model, this process can prescribe the name rather than predict
     - ``` This process is proven to give better results rather than using any pretrained NER models as its going to be hard for any NER model to understand the variations and the variety of resume.``` 
 
-## Matching the Resume to provided expertise list
+#### Obj2: Matching the Resume to provided expertise list
 
-- For every word in the expertise list, we have got the gllove word embedding provided by spacy library
-- Then we got the similarity score of the each word embedding to the nouns and verbs of the resume
-- The top 5 words with more similarity score to the score are given as the top 5 expertises of the resume 
+- For every word in the expertise list, I have got the glove word embedding provided by spacy library
+- Then I got the similarity score of the each word embedding to all the nouns (do the parts of speech tagging and eliminate all other part of speech words  other than nouns) of the resume;
+- The top 5 highest similarity score words are given as the expertise of the resume
 
-```We have used the pretrained glove embeddeding moodek, in an ideal scenario we need to train our own emebddeding model on our domain corpus. The above appproach was presented as a proof of concept```
+```
+We have used the pretrained glove embedded model, in an ideal scenario we need to train our own word embedded model on a specfic domain corpus. But the results from the above approach seem compelling too. 
+
+For example: 
+-'resume_trail4' is the resume of an Orthopaedic Spine Surgery, below are the top5 expertises the code matched from the expertise list
+
+'radiology, internal medicine, general dentistry, general surgeon, physical therapy'
+
+- 'resume_trail2' is the resume of a Building inspector (related to construction), below are the top5 expertises the code matched from the expertise list
+
+'highway design & construction, public health, life care planner, fire cause & analysis, hospital administration'
+```
 
 ## Matching the Resume to the job description
 
