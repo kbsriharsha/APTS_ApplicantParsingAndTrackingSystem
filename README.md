@@ -58,6 +58,7 @@ when someone executes the code, the code pushes the output to the respective col
 - The top 5 highest similarity score words are given as the expertise of the resume
 
 ```
+
 We have used the pretrained glove embedded model, in an ideal scenario we need to train our own word embedded model on a specfic domain corpus. But the results from the above approach seem compelling too. 
 
 For example: 
@@ -68,12 +69,18 @@ For example:
 - 'resume_trail2' is the resume of a Building inspector (related to construction), below are the top5 expertises the code matched from the expertise list
 
 'highway design & construction, public health, life care planner, fire cause & analysis, hospital administration'
+
 ```
 
-## Matching the Resume to the job description
+#### Matching the Resume to the job description
 
-- This process also uses glove word embedding and calculate the similarity score between the job description and the resume
+- Get the Glove word embedding to every noun and verb of the resume and the job description. 
+- The calcuate the similarity score between those documents with only verbs and nouns
 
-```All the traditional ATS systems uses the keywords to filter out the resumes, however there are many scenarios where keyword approach is proven wrong. This is presented as a POC how can we better construct any ATS system with word embedding as they care both for keywords and the order of the words```
+```
+All the traditional ATS systems uses the keywords to filter out the resumes, however there are many scenarios where keyword approach is proven wrong. This is presented as a POC how can we better construct any ATS system with word embedding as they care both for keywords and the order of the words
+
+
+```
 
 
