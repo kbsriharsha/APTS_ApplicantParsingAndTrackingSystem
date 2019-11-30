@@ -86,8 +86,8 @@ hospital administration'
 ```
 All the traditional ATS systems uses the keywords to filter out the resumes, however there are 
 many scenarios where keyword approach is proven wrong. This approach is presented as a POC how can we 
-better construct the ATS system with word embedding as they care both for keywords and the order 
-of the words
+better construct the ATS system with word embedding as they care both for keywords and the dependency 
+between words
 
 Examples:
 Currently the job description to be matched is a data engineer position from Travelers Insurance
