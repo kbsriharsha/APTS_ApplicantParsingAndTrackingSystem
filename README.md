@@ -1,9 +1,9 @@
 # APTS_ApplicantParsingAndTrackingSystem ![](https://img.shields.io/badge/Harsha-Karpurapu-brightgreen.svg?colorB=ff0000)
 
-## Objectives: 
+### Objectives: 
 - Extracts the important information from the resume
-- Matches the resume to the provided expertise list (This list was provided by Vinod to Harsha)
-- Matches the resume to the Job description (For Concept purpose, I downloaded one of the resumes from the job board of travelers insurance)
+- Matches the resume to the provided expertise list (This list was provided by *Vinod* to Harsha)
+- Matches the resume to the Job description (For Concept purpose, I have downloaded the data engineer resume from the job board of travelers insurance)
 
 ### Code Requirements
 - Execute the below command from your terminal for installing all the required libraries
@@ -16,7 +16,7 @@ pip install requirement.txt
 ```
 python -m spacy download en_core_web_md
 ```
-## Usage
+### Usage
 
 ```
 python resumeparser [-resume resumeFile]
@@ -27,7 +27,10 @@ Example:
 python resumeparser -resume "/data/resumes/resume_trail4.pdf"
 ```
 
+### Output Sample
+Everytime when someone executes the code, the code pushes the output to the respective columns in the database and prints the contents in the json format
 
+Donwload the DB Browser from [here](https://sqlitebrowser.org/dl/) for viewing the results
 
 ## Information Extraction Details
 
