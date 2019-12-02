@@ -29,7 +29,7 @@ python resumeparser [-resume resumeFile]
 -resume; input resume file
 
 Example: 
-python resumeparser -resume "/data/resumes/resume_trail4.pdf"
+python resumeparser -resume "data/resumes/resume_trail4.pdf"
 ```
 
 when you execute the code, the code pushes the output to the respective columns in the database and prints the contents in the json format
@@ -49,7 +49,7 @@ when you execute the code, the code pushes the output to the respective columns 
 
 - Name
   - Used the chunking and chinking concepts in combination with a lookup table. Unlike any NER model, this process can prescribe the name rather than predict
-    - ``` This process is proven to give better results rather than using any pretrained NER models as its going to be hard for any NER model to understand the variations and the variety of resume.``` 
+    - ``` This process is proven to give better results rather than using any pretrained NER models as its hard for any NER model to understand the variations and the variety of resume.``` 
 
 #### Obj2: Matching the Resume to provided expertise list
 
@@ -65,7 +65,7 @@ seem compelling too.
 
 Examples: 
 --------------------------------------------------------------------------------------------
--'resume_trail4' is the resume of an Orthopaedic Spine Surgery, below are the top5 expertises 
+-'resume_trail4'(data/resumes) is the resume of an Orthopaedic Spine Surgery, below are the top5 expertises 
 the code matched from the expertise list
 
 'radiology, internal medicine, general dentistry, general surgeon, physical therapy'
